@@ -201,4 +201,14 @@ class Medicine extends BaseRequest
     {
         return $this->post('medicine/hq/batchAddPoi', $params);
     }
+
+    /**
+     * 批量更新药品库存
+     * @param array $params
+     * @return mixed
+     */
+    public function stock(array $params)
+    {
+        return $this->post('medicine/stock', $params);
+    }
 }

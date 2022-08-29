@@ -54,7 +54,7 @@ class Application
     {
         if (! isset($this->$name)) {
             $class_name = ucfirst($name);
-            $application = "\\Abbotton\\MeituanTakeaway\\Request\\{$class_name}";
+            $application = "MeiTuan\\Request\\{$class_name}";
             if (! class_exists($application)) {
                 throw new Exception($class_name.'不存在');
             }
