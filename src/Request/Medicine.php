@@ -16,6 +16,16 @@ class Medicine extends BaseRequest
     }
 
     /**
+     * 批量更新药品库存
+     * @param array $params
+     * @return mixed
+     */
+    public function stock(array $params)
+    {
+        return $this->post('medicine/stock', $params);
+    }
+
+    /**
      * 批量更新 app_medicine_code.
      *
      * @param array $params
@@ -203,12 +213,14 @@ class Medicine extends BaseRequest
     }
 
     /**
-     * 批量更新药品库存
-     * @param array $params
+     * 查询门店药品列表
+     *
+     * @param  array  $params
      * @return mixed
      */
-    public function stock(array $params)
+    public function medicineList(array $params)
     {
-        return $this->post('medicine/stock', $params);
+        return $this->get('medicine/list', $params);
     }
+
 }
