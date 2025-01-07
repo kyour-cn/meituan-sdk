@@ -26,6 +26,16 @@ class Medicine extends BaseRequest
     }
 
     /**
+     * 创建药品
+     * @param array $params
+     * @return mixed
+     */
+    public function save(array $params)
+    {
+        return $this->post('medicine/save', $params);
+    }
+
+    /**
      * 批量更新 app_medicine_code.
      *
      * @param array $params
