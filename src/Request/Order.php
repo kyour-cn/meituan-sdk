@@ -584,7 +584,7 @@ class Order extends BaseRequest
      */
     public function batchDecrypt(array $params)
     {
-        return $this->post('gw/order/batchDecrypt', $params);
+        return $this->post('ecommerce/health/batchDecrypt', $params);
     }
 
     /**
